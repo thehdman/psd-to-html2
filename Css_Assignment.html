@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css_Assignment</title>
+    <style>
+        body{
+            background-image: url("hdr.jpg");
+            background-size: 150%;
+     }
+
+     .base {
+      font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,
+  sans-serif;
+  font-size: 14px;
+  display: grid;
+  grid-template-rows: max-content auto;
+  grid-gap: 10px;
+  height: 100%;
+  padding: 5px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  
+}
+
+.header .left-aligned {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 5px;
+  justify-self: flex-start;
+}
+
+.header .right-aligned {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 5px;
+justify-self: flex-start;  
+}
+
+.header .logo {
+  justify-self: center;
+  
+}
+
+.header .right-aligned {
+  justify-self: flex-end;
+}
+
+.board {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: max-content auto;
+}
+
+.board-header {
+  color: black;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.board-header-text {
+  padding: 5px;
+  color: white;
+}
+
+.board-header .left {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  grid-gap: 10px;
+  justify-self: left;
+}
+
+.board-header .right {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-gap: 10px;
+  justify-self: right;
+}
+
+.button {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.board-lists {
+  display: grid;
+  grid-auto-columns: 272px;
+  grid-auto-flow: column;
+  grid-gap: 8px; 
+  overflow-x: scroll;
+  height: 86vh;
+
+}
+
+.board-list {
+  background-color: rgb(235, 236, 240);
+  border-radius: 3px;
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-gap: 10px;
+  height: max-content;
+  padding: 10px;
+}
+.list-title {
+  font-weight: bold;
+}
+
+.card {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(9,30,66,.25);
+  padding: 10px;
+}
+
+.add-card {
+  padding-top: 2px;
+  padding-bottom: 3px;
+}
+
+.ccard{
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(9,30,66,.25);
+    padding: 40px;
+}
+
+.add-ccard{
+    color: white;
+  background-color: yellowgreen;
+  border-radius: 5px;
+  padding: 5px;
+}
+ 
+ .logo{
+     color: white;
+     font-weight: bold;
+     background-color: lightblue;
+     padding: 5px;
+ }
+
+    </style>
+</head>
+<body>
+    <div class="base">
+        <div class="header">
+          <div class="left-aligned">
+            <div class="button">Home</div>
+            <div class="button">Boards</div>
+            <div class="button">Search bar</div>
+          </div>
+          
+          <div class="logo  ">
+            <i>Tralala</i>
+          </div>
+          <div class="right-aligned">
+            <div class="button">Add</div>
+            <div class="button">Contact</div>
+          </div>
+        </div>
+        <div class="board">
+          <div class="board-header">
+            <div class="left">
+              <div class="board-header-text">Frontend Training</div>
+            </div>
+            <div class="right">
+              <div class="board-header-text">: Show Menu</div>
+            </div>
+          </div>
+          <div class="board-lists">
+            <div class="board-list">
+              <div class="list-title">
+                List title
+              </div>
+              <div class="card">
+                Learn HTML
+              </div>
+              <div class="card">
+                Learn CSS
+              </div>
+              <div class="card">
+                Learn JAVASCRIPT
+              </div>
+              <div class="add-card">
+                + Add another card
+              </div>
+            </div>
+            <div class="board-list">
+                <div class="list-title">
+                  Doing
+                </div>
+                <div class="card">
+                  Prepare Resume
+                </div>
+                <div class="ccard">
+                </div>
+                <div class="add-ccard">
+                   Add card 
+                </div>
+              </div>
+              <div class="board-list">
+                <div class="list-title">
+                  Testing/Verifying
+                </div>
+                <div class="card">
+                  Twitter App Frontend
+                </div>
+                <div class="add-card">
+                   + Add another card
+                </div>
+              </div>
+              <div class="board-list">
+                <div class="list-title">
+                  Deploying
+                </div>
+                <div class="card">
+                  Twitter App Backend
+                </div>
+                <div class="add-card">
+                  + Add another card
+                </div>
+              </div>
+              <div class="board-list">
+                <div class="list-title">
+                  Done
+                </div>
+                <div class="add-card">
+                  + Add another card
+                </div>
+              </div>
+              <div class="board-list">
+              <div class="add-card">
+                + Add another card
+              </div>
+              </div>
+              <div class="board-list">
+                <div class="ccard">
+                </div>
+                <div class="add-ccard">
+                   Add card
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+</body>
+</html>
